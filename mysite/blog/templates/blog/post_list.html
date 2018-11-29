@@ -4,19 +4,18 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <h1><a href="/">DJANGO GIRLS</a></h1>
+        </div>    
+        
+        {% for post in posts %}
+        <div>    
+            <p>published: {{ post.created_date_date}}</p>
+            <p><a href=""> {{post.title }}</a></p>
+            <p> {{ post.text|linebreaksbr }}</p>
         </div>
+        {% endfor %}
+            
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>My first post. jkcbjhdbcjhdbcjhdbc</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>this is good.</p>
-        </div>
+        
     </body>
 </html>
